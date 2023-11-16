@@ -10,13 +10,12 @@ class Trip extends Model {
       type: "object",
       required: ["name", "location", "startDate", "endDate"],
       properties: {
-        id: { type: ["string, integer"] },
         name: { type: "string" },
         location: { type: "string" },
         startDate: { type: "string" },
         endDate: { type: "string" },
         status: { type: "string" },
-        notes: { type: "text" },
+        notes: { type: "string" },
       },
     }
   }

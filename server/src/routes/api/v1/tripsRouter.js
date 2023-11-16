@@ -3,14 +3,14 @@ import { Trip } from "../../../models/index.js"
 // import destinationReviewsRouter from "./destinationsReviewRouter.js"
 import objection from "objection"
 const { ValidationError } = objection
-import cleanUserInput from "../../../services/cleanUserInput.js"
+// import cleanUserInput from "../../../services/cleanUserInput.js"
 
 const tripsRouter = new express.Router()
 
-tripsRouter.get( "/trips", async ( req, res ) => {
+tripsRouter.get( "/", async ( req, res ) => {
   try {
-    const tripsList = await Trip.query()
-    return res.status( 200 ).json( { trips: tripsList } )
+    const allTrips = await Trip.query()
+    return res.status( 200 ).json( { trips: allTrips } )
   } catch ( err ) {
     return res.status( 500 ).json( { error: err } )
   }
@@ -19,8 +19,8 @@ tripsRouter.get( "/trips", async ( req, res ) => {
 // tripsRouter.post( "/", async ( req, res ) => {
 //   const formInput = cleanUserInput( req.body )
 //   try {
-//     const newDestinationFromDestinationTable = await Destination.query().insertAndFetch( formInput )
-//     return res.status( 201 ).json( { destination: newDestinationFromDestinationTable } )
+//     const newTrips = await Trip.query().insertAndFetch( formInput )
+//     return res.status( 201 ).json( { destination: newTrips } )
 //   } catch ( err ) {
 //     if ( err instanceof ValidationError ) {
 //       return res.status( 422 ).json( { errors: err.data } )
@@ -33,7 +33,7 @@ tripsRouter.get( "/trips", async ( req, res ) => {
 // tripsRouter.get( "/:id", async ( req, res ) => {
 //   const id = req.params.id
 //   try {
-//     const destination = await Destination.query().findById( id )
+//     const trip = await Trip.query().findById( id )
 //     const relatedReviews = await destination.$relatedQuery( "reviews" )
 //     destination.reviews = relatedReviews
 //     return res.status( 200 ).json( { destination: destination } )

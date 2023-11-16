@@ -12,7 +12,7 @@ exports.up = async ( knex ) => {
     table.string( "startDate" ).notNullable()
     table.string( "endDate" ).notNullable()
     table.string( "location" )
-    table.text( "notes" )
+    table.string( "notes" )
     table.string( "status" )
     table.timestamp( "createdAt" ).notNullable().defaultTo( knex.fn.now() )
     table.timestamp( "updatedAt" ).notNullable().defaultTo( knex.fn.now() )
