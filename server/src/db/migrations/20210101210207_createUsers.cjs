@@ -24,7 +24,7 @@ exports.up = async (knex) => {
 
   console.log(`${tableName} already exists; skipping`);
   return 1;
-};
+}
 
 /**
  * @param {Knex} knex
@@ -32,4 +32,4 @@ exports.up = async (knex) => {
 exports.down = async (knex) => {
   console.log(`Rolling back ${tableName}`);
   return knex.schema.dropTableIfExists(tableName);
-};
+}

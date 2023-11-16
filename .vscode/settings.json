@@ -1,0 +1,31 @@
+{
+  "editor.acceptSuggestionOnEnter": "smart",
+  "javascript.format.semicolons": "remove",
+  "editor.fontFamily": "Source Code Pro, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.5,
+  "prettier.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.quoteProps": "consistent",
+  "prettier.jsxSingleQuote": true,
+  "editor.formatOnSave": true,
+  "typescript.format.semicolons": "remove",
+  "editor.defaultFormatter": null,
+  "workbench.editor.untitled.labelFormat": "content",
+  "workbench.editor.labelFormat": "default",
+  "editor.formatOnType": true,
+  "editor.formatOnSaveMode": "file",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "cSpell.words": [
+    "crypted"
+  ],
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "editor.formatOnPaste": true,
+  "prettier.embeddedLanguageFormatting": "off",
+  "prettier.enable": false,
+  "prettier.semi": false
+}
