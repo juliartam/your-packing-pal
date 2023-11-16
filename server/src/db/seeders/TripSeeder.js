@@ -1,4 +1,4 @@
-import { Trip, User } from "../../models/index.js"
+import { Trip } from "../../models/index.js"
 
 class TripSeeder {
   static async seed() {
@@ -10,7 +10,6 @@ class TripSeeder {
         endDate: "September 21, 2023",
         status: "New",
         notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        userId: "200200"
       },
       {
         name: "Mont-Tremblant Ski Trip",
@@ -19,7 +18,6 @@ class TripSeeder {
         endDate: "January 2, 2024",
         status: "New",
         notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        userId: "200200"
       }
     ]
     for ( const trip of tripsSeederData ) {

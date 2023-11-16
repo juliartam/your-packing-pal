@@ -7,7 +7,7 @@ import cleanUserInput from "../../../services/cleanUserInput.js"
 
 const tripsRouter = new express.Router()
 
-tripsRouter.get( "/", async ( req, res ) => {
+tripsRouter.get( "/trips", async ( req, res ) => {
   try {
     const tripsList = await Trip.query()
     return res.status( 200 ).json( { trips: tripsList } )

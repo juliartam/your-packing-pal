@@ -1,40 +1,25 @@
-const Model = require("./Model.js");
+const Model = require( "./Model.js" )
 
 class Trip extends Model {
   static get tableName() {
-    return "trips";
+    return "trips"
   }
 
   static get jsonSchema() {
     return {
       type: "object",
-      required: ["name", "location", "startDate", "endDate", "userId"],
+      required: ["name", "location", "startDate", "endDate"],
       properties: {
         id: { type: ["string, integer"] },
         name: { type: "string" },
         location: { type: "string" },
-        startDate: { type: "timestamp" },
-        endDate: { type: "timestamp" },
+        startDate: { type: "string" },
+        endDate: { type: "string" },
         status: { type: "string" },
         notes: { type: "text" },
-        userId: { type: ["integer", "string"] },
       },
-    };
-  }
-
-  static get relationMappings() {
-    const { User } = require("./index.js");
-    return {
-      users: {
-        relation: Model.BelongsToOneRelation,
-        modelClass: User,
-        join: {
-          from: "trips.userId",
-          to: "users.id",
-        },
-      },
-    };
+    }
   }
 }
 
-module.exports = Trip;
+module.exports = Trip
