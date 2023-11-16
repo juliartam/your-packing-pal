@@ -15,9 +15,8 @@
   "workbench.editor.labelFormat": "default",
   "editor.formatOnType": true,
   "editor.formatOnSaveMode": "file",
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
-  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
   "cSpell.words": [
     "crypted"
   ],
@@ -27,5 +26,10 @@
   "editor.formatOnPaste": true,
   "prettier.embeddedLanguageFormatting": "off",
   "prettier.enable": false,
-  "prettier.semi": false
+  "prettier.semi": false,
+  "prettier.bracketSpacing": false,
+  "prettier.endOfLine": "auto",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
