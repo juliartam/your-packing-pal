@@ -1,29 +1,29 @@
-import { Trip } from "../../models/index.js"
+import {Trip, User} from "../../models/index.js"
 
 class TripSeeder {
   static async seed() {
-    const tripsSeederData = [
+    const userOne = await User.query().findOne({email: "betty@notreal.com"})
+
+    const tripSeederData = [
       {
         name: "Greece Trip",
         location: "Vouliagmeni, Greece",
         startDate: "September 13, 2023",
         endDate: "September 21, 2023",
-        status: "New",
-        notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        userId: userOne.id
       },
       {
-        name: "Mont-Tremblant Ski Trip",
+        name: "Ski Trip",
         location: "Mont-Tremblant, Canada",
         startDate: "December 29, 2023",
         endDate: "January 2, 2024",
-        status: "New",
-        notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        userId: userOne.id
       }
     ]
-    for ( const trip of tripsSeederData ) {
-      const currentTrip = await Trip.query().findOne( { name: trip.name } )
-      if ( !currentTrip ) {
-        await Trip.query().insert( trip )
+    for (const trip of tripSeederData) {
+      const currentTrip = await Trip.query().findOne({name: trip.name})
+      if (!currentTrip) {
+        await Trip.query().insert(trip)
       }
     }
   }

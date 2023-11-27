@@ -1,35 +1,41 @@
-import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { hot } from "react-hot-loader/root"
-
+import React, {useState, useEffect} from "react"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {hot} from "react-hot-loader/root"
 import getCurrentUser from "../services/getCurrentUser"
 import "../assets/scss/main.scss"
 import RegistrationForm from "./registration/RegistrationForm"
 import SignInForm from "./authentication/SignInForm"
+import SplashPage from './layout/SplashPage'
 import TopBar from "./layout/TopBar"
+import TripDetail from './layout/TripDetail'
 import TripList from './layout/TripList'
+import NewTripForm from './layout/NewTripForm'
+import ActivityTile from './layout/ActivityTile'
 
-const App = ( props ) => {
-  const [currentUser, setCurrentUser] = useState( undefined )
+
+const App = (props) => {
+  const [currentUser, setCurrentUser] = useState(undefined)
   const fetchCurrentUser = async () => {
     try {
       const user = await getCurrentUser()
-      setCurrentUser( user )
-    } catch ( err ) {
-      setCurrentUser( null )
+      setCurrentUser(user)
+    } catch (err) {
+      setCurrentUser(null)
     }
   }
 
-  useEffect( () => {
+  useEffect(() => {
     fetchCurrentUser()
-  }, [] )
+  }, [])
 
   return (
     <Router>
       <TopBar user={currentUser} />
       <Switch>
-        <Route exact path="/" component={TripList} />
-        <h2>Hello from react</h2>
+        <Route exact path="/" component={SplashPage} />
+        <Route exact path="/trips" component={TripList} />
+        <Route exact path="/trips/new" component={NewTripForm} />
+        <Route exact path="/trips/:id" component={TripDetail} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
       </Switch>
@@ -37,4 +43,4 @@ const App = ( props ) => {
   )
 }
 
-export default hot( App )
+export default hot(App)

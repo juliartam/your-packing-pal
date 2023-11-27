@@ -1,6 +1,9 @@
 @import "./foundation/settings";
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
+// @import "https://fonts.googleapis.com/css?family=Font+Name";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+
 // place global css here
 *,
 *::before,
@@ -11,4 +14,231 @@
 :root {
   -moz-tab-size: 4;
   tab-size: 4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dce8f8;
+}
+
+.not-nav {
+  margin: 0 5em;
+}
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.icon {
+  height: 5em;
+  width: 5em;
+  float: right;
+}
+
+.page-background {
+  background: #dce8f8;
+}
+
+//{#100} PAGE HEADER
+.page-header-container {
+  padding: 0.01em;
+  margin: 0.1em;
+  display: grid;
+}
+
+.page-header-title {
+  font-family: "PP Editorial New";
+  font-weight: bolder;
+  font-size: 30pt;
+  text-align: center;
+  color: #222b3b;
+  padding: 0.1em;
+  margin: 0.1em 0.1em 0.5em 0.1em;
+}
+
+.material-icons {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px; /* Preferred icon size */
+  display: grid;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: #222b3b;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+
+    font-size: 50px;
+    // text-align: center;
+    // display: flex;
+    // align-items: center;
+  }
+}
+
+//{#100} TILES
+.tile-style {
+  padding: 0.6em;
+  margin: 0.7em;
+  background-color: white;
+  border: 1px solid #006d7763;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 1px 1px #77969b58;
+}
+.tile-title {
+  font-family: "PP Editorial New";
+  font-size: 20px;
+  font-weight: 900;
+  color: #2b2d42;
+  display: inline;
+}
+.tile-subtitle {
+  font-family: "Playfair Display";
+  font-size: medium;
+  color: #2b2d42;
+  display: table-row;
+}
+.tile-body {
+  font-family: "Playfair Display";
+  font-size: medium;
+  color: #2b2d42;
+  display: table-row;
+}
+
+.custom-button {
+  float: right;
+  background-color: #dce8f8;
+  color: #2b2d42;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.2em;
+  height: 40px;
+  width: 70px;
+  text-align: center;
+  margin: auto 1px;
+  padding: 7px 0;
+  font-weight: bold;
+  font-family: "Avenir";
+}
+.custom-button:hover,
+.nav-option:hover {
+  background-color: #edf6f9;
+  color: #006d77;
+}
+
+.custom-button:focus,
+.nav-option:focus {
+  background-color: #dce8f8;
+  color: #2b2d42;
+}
+
+.custom-button:hover {
+  border: 1px solid #dce8f8;
+}
+
+.top-bar {
+  border: 1px solid #dce8f8;
+  background-color: #dce8f8;
+
+  ul {
+    background-color: #dce8f8;
+  }
+}
+
+.menu {
+  background-color: #dce8f8;
+}
+
+.nav-option {
+  background-color: #dce8f8;
+  color: #dce8f8;
+}
+
+.sign-in {
+  color: #dce8f8;
+}
+.sign-in:hover {
+  color: #dce8f8;
+}
+.sign-in:focus {
+  color: #dce8f8;
+}
+
+//{#100} FORMS
+.form-title {
+  color: #2b2d42;
+  font-family: "PP Editorial New";
+  font-weight: bolder;
+  font-size: 30pt;
+  text-align: center;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.form-label {
+  color: #2b2d42;
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  text-align: left;
+  padding: 0px 0px 0px 0px;
+}
+.form-input-single {
+  color: #2b2d42;
+  border-color: #abd7d2;
+  height: 40px;
+  width: 500px;
+  padding: 7px 0px 12px 0px;
+  border-radius: 0.2em;
+  align-items: center;
+  justify-content: center;
+  display: flexbox;
+}
+.form-input-multi {
+  color: #2b2d42;
+  border-color: #abd7d2;
+  height: 100px;
+  width: 500px;
+  padding: 7px 0 10px 0px;
+  border-radius: 0.2em;
+  display: flexbox;
+}
+.form-submit-button {
+  background-color: #dce8f8;
+  color: #2b2d42;
+  text-transform: uppercase;
+  border-radius: 0.2em;
+  height: 40px;
+  width: 250px;
+  margin: 10px 1px;
+  padding: 50px 50;
+  font-family: "Red Hat Text";
+  font-weight: bold;
+  border-color: #2b2d42;
+}
+
+//{#100} SPLASH PAGE
+.splash-page-title {
+  font-family: "Notable";
+  font-size: 180px;
+  color: #222b3b;
+  text-align: left;
+  padding: 10px 0;
+  align-items: left;
+  justify-content: left;
 }

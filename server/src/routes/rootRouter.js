@@ -10,6 +10,9 @@ rootRouter.use( "/api/v1/user-sessions", userSessionsRouter )
 rootRouter.use( "/api/v1/users", usersRouter )
 //place your server-side routes here
 rootRouter.use( "/api/v1/trips", tripsRouter )
+// rootRouter.us( "/api/vi/historyEndpoints", historyRouter)
+//jt: firsst make new rootRouter
+
 
 
 export default rootRouter
