@@ -55,7 +55,24 @@ body {
 .page-header-title {
   font-family: "PP Editorial New";
   font-weight: bolder;
-  font-size: 30pt;
+  font-size: 30px;
+  text-align: center;
+  color: #222b3b;
+  padding: 0.1em;
+  margin: 0.1em 0.1em 0.5em 0.1em;
+}
+
+.page-header-subtitle {
+  font-family: "PP Editorial New";
+  font-size: 20px;
+  text-align: center;
+  color: #222b3b;
+  padding: 0.1em;
+  margin: 0.1em 0.1em 0.5em 0.1em;
+}
+.page-header-caption {
+  font-family: "Red Hat Text";
+  font-size: 20px;
   text-align: center;
   color: #222b3b;
   padding: 0.1em;
@@ -188,48 +205,48 @@ body {
   font-size: 30pt;
   text-align: center;
   padding: 10px 0;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
 }
 .form-label {
   color: #2b2d42;
   font-family: "Proxima Nova";
   font-size: 18px;
-  text-align: left;
+  // text-align: left;
   padding: 0px 0px 0px 0px;
+  display: flexbox;
+  // align-items: center;
+  // justify-content: center;
 }
 .form-input-single {
+  font-family: "Red Hat Text";
+  font-size: 14px;
   color: #2b2d42;
-  border-color: #abd7d2;
+  border-color: #2b2d4233;
   height: 40px;
-  width: 500px;
-  padding: 7px 0px 12px 0px;
-  border-radius: 0.2em;
-  align-items: center;
-  justify-content: center;
-  display: flexbox;
+  padding: 5px 10px 5px 10px;
+  border-radius: 0.9em;
 }
 .form-input-multi {
+  font-family: "Red Hat Text";
+  font-size: 14px;
   color: #2b2d42;
-  border-color: #abd7d2;
-  height: 100px;
-  width: 500px;
-  padding: 7px 0 10px 0px;
-  border-radius: 0.2em;
-  display: flexbox;
+  border-color: #2b2d4233;
+  height: 80px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 0.9em;
 }
 .form-submit-button {
-  background-color: #dce8f8;
-  color: #2b2d42;
-  text-transform: uppercase;
-  border-radius: 0.2em;
+  background-color: #2b2d4233;
+  color: #2b2d429e;
   height: 40px;
-  width: 250px;
-  margin: 10px 1px;
-  padding: 50px 50;
+  width: 100px;
+  border-radius: 1em;
+  border-color: #2b2d4233;
+  border-style: none;
   font-family: "Red Hat Text";
-  font-weight: bold;
-  border-color: #2b2d42;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 //{#100} SPLASH PAGE

@@ -60,50 +60,56 @@ const NewTripForm = (props) => {
     return <Redirect push to={"/trips"} />
   }
 
+
+
   return (
-    <div className="grid-container grid-x grid-margin-x">
-      <div className="form-title">New Trip Form</div>
-      <ErrorList errors={errors} />
-      <form onSubmit={handleSubmit} className="grid-container">
-        <label className="form-label">Name
+    <div className="grid-x grid-padding-x align-center">
+      <div className="cell medium-4">
+        <div className="form-title">Trip</div>
+        <ErrorList errors={errors} />
+        <form onSubmit={handleSubmit} className="grid-x grid-padding-x align-center">
           <input
             className="form-input-single"
             name="name"
             value={newTrip.name}
             type="text"
             onChange={handleInputChange}
+            placeholder="Name your trip..."
           />
-        </label>
-        <label className="form-label">Location
           <input
             className="form-input-single"
             name="location"
             value={newTrip.location}
             type="text"
             onChange={handleInputChange}
+            placeholder="Where are you going?"
           />
-        </label>
-        <label className="form-label">Start Date
           <input
             className="form-input-single"
             name="startDate"
             value={newTrip.startDate}
-            type="date"
+            type="text"
             onChange={handleInputChange}
+            placeholder='When does your trip start?'
+            onClick={(e) => (e.target.value)}
+            onFocus={(e) => (e.target.type = "date")}
+            onBlur={(e) => (e.target.type = "text")}
           />
-        </label>
-        <label className="form-label">End Date
           <input
             className="form-input-single"
             name="endDate"
             value={newTrip.endDate}
-            type="date"
+            type="text"
             onChange={handleInputChange}
+            placeholder='When does your trip end?'
+            onClick={(e) => (e.target.value)}
+            onFocus={(e) => (e.target.type = "date")}
+            onBlur={(e) => (e.target.type = "text")}
           />
-        </label>
-        <input className="form-submit-button" type="Submit" name="Submit" />
-      </form>
-    </div >
+          <input className="form-submit-button" type="Submit" name="Submit" />
+        </form>
+      </div>
+    </div>
   )
 }
 

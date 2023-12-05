@@ -3,6 +3,7 @@ import {useParams, Redirect} from "react-router-dom"
 import translateServerErrors from "../../services/translateServerErrors"
 import ErrorList from "./ErrorList"
 
+
 const NewActivityForm = (props) => {
   const {id} = useParams()
 
@@ -72,35 +73,65 @@ const NewActivityForm = (props) => {
   // ) )
 
   return (
-    <>
-      <div className="grid-container">
-        <h1 className="form-title">New Activity Form</h1>
-
+    <div className="grid-x grid-padding-x align-center">
+      <div className="cell medium-4">
+        <h1 className="form-title">Activity</h1>
         <ErrorList errors={errors} />
-
-        <form onSubmit={handleSubmit}>
-          <label className="form-label">Name</label>
+        <form onSubmit={handleSubmit} className="grid-x grid-padding-x align-center">
           <input
             className="form-input-single"
             name="name"
             value={newActivity.name}
             type="text"
             onChange={handleInputChange}
+            placeholder="What is the activity you want to pack for?"
           />
-
-          <label className="form-label">Notes</label>
           <input
             className="form-input-multi"
             name="notes"
             value={newActivity.notes}
             type="text"
             onChange={handleInputChange}
+            placeholder="Any notes? Add them here..."
           />
           <input className="form-submit-button" type="Submit" />
         </form>
       </div>
-    </>
+    </div>
   )
 }
 
 export default NewActivityForm
+
+
+
+// return (
+//   <>
+//     <div className="grid-container">
+//       <h1 className="form-title">New Activity Form</h1>
+
+//       <ErrorList errors={errors} />
+
+//       <form onSubmit={handleSubmit} className="form-input-single grid-container grid-x grid-margin-x cell medium-6">
+//         <input
+//           className="form-input-single grid-container grid-x grid-margin-x cell medium-8"
+//           name="name"
+//           value={newActivity.name}
+//           type="text"
+//           onChange={handleInputChange}
+//           placeholder="What is the activity you want to pack for?"
+//         />
+//         <input
+//           className="form-input-single grid-container grid-x grid-margin-x cell medium-8"
+//           name="notes"
+//           value={newActivity.notes}
+//           type="text"
+//           onChange={handleInputChange}
+//           placeholder="Any notes? Add them here..."
+//         />
+//         <input className="form-submit-button grid-container grid-x grid-margin-x cell medium-8" type="Submit" />
+//       </form>
+//     </div>
+//   </>
+// )
+// }

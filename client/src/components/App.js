@@ -11,6 +11,7 @@ import TripDetail from './layout/TripDetail'
 import TripList from './layout/TripList'
 import NewTripForm from './layout/NewTripForm'
 import ActivityTile from './layout/ActivityTile'
+import NewActivityForm from './layout/NewActivityForm'
 
 
 const App = (props) => {
@@ -36,6 +37,8 @@ const App = (props) => {
         <Route exact path="/trips" component={TripList} />
         <Route exact path="/trips/new" component={NewTripForm} />
         <Route exact path="/trips/:id" component={TripDetail} />
+        <Route exact path="/trips/new" component={NewTripForm} />
+        <Route exact path="/trips/:id/activities-new" component={NewActivityForm} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
       </Switch>
