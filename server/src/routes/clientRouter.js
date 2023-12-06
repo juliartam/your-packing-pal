@@ -10,6 +10,7 @@ const clientRoutes = [
   "/trips/new",
   "/trips/:id",
   "/trips/:id/activities-new",
+  "trips/:id/activities/:id/items-new",
   "/user-sessions/new",
   "/users/new",
 ]

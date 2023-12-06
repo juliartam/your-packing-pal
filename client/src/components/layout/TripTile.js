@@ -18,16 +18,3 @@ const TripTile = (props) => {
 
 export default TripTile
 
-{/* 
-      <h2>XY Grid Gutter Example</h2>
-<p>Cells have background red, content inside has background blue. </p>
-<h4>Margin Gutters</h4>
-<div class="grid-x grid-margin-x">
-  <div class="medium-6 large-4 cell"><div class="demo">12/6/4 cells</div></div>
-  <div class="medium-6 large-8 cell"><div class="demo">12/6/8 cells</div></div>
-</div>
-<h4>Padding Gutters</h4>
-<div class="grid-x grid-padding-x">
-  <div class="medium-6 large-4 cell "><div class="demo">12/6/4 cells</div></div>
-  <div class="medium-6 large-8 cell"><div class="demo">12/6/8 cells</div></div>
-</div> */}
