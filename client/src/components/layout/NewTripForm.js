@@ -42,7 +42,6 @@ const NewTripForm = (props) => {
   }
 
 
-
   const handleInputChange = (event) => {
     setNewTrip({
       ...newTrip,
@@ -59,7 +58,6 @@ const NewTripForm = (props) => {
   if (shouldRedirect) {
     return <Redirect push to={"/trips"} />
   }
-
 
 
   return (

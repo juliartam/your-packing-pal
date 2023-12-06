@@ -57,6 +57,7 @@ tripsRouter.post("/", async (req, res) => {
 
 
 tripsRouter.get("/:id", async (req, res) => {
+  console.log("Hello")
   const id = req.params.id
   try {
     const trip = await Trip.query().findById(id)

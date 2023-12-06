@@ -17,7 +17,8 @@ const NewActivityForm = (props) => {
 
   const addNewActivity = async () => {
     try {
-      const response = await fetch(`/api/v1/trips/${id}`, {
+      //added /actiities to
+      const response = await fetch(`/api/v1/trips/${id}/activities`, {
         method: "POST",
         headers: new Headers({"Content-Type": "application/json"}),
         body: JSON.stringify(newActivity),
