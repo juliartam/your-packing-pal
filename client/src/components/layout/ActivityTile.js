@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-const ActivityTile = ({name, date, notes}) => {
+const ActivityTile = ({id, name, date, notes}) => {
 
 
   return (
@@ -13,10 +13,10 @@ const ActivityTile = ({name, date, notes}) => {
             <h3 className="tile-title">{name}</h3>
             <p className="tile-subtitle"> {date}</p>
             <p className="tile-body">{notes}</p>
+            <Link to={`/trips/${id}/activities/${id}/items-new`}>add item</Link>
           </div>
         </div>
       </div>
-
     </div>
 
   )

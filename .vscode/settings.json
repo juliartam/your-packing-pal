@@ -35,5 +35,6 @@
   "outline.showNamespaces": true,
   "prettier.bracketSameLine": true,
   "html.format.indentInnerHtml": true,
-  "html.format.templating": true
+  "html.format.templating": true,
+  "editor.trimAutoWhitespace": false
 }

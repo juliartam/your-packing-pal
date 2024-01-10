@@ -189,6 +189,7 @@ body {
 
 .sign-in {
   color: #dce8f8;
+  font-family: "Avenir";
 }
 .sign-in:hover {
   color: #dce8f8;
@@ -250,12 +251,45 @@ body {
 }
 
 //{#100} SPLASH PAGE
+.splash-page-background {
+  background: #EFE6DD;
+}
 .splash-page-title {
-  font-family: "Notable";
-  font-size: 180px;
-  color: #222b3b;
-  text-align: left;
-  padding: 10px 0;
-  align-items: left;
-  justify-content: left;
+  font-family: "PP Editorial New";
+  font-weight: bolder;
+  font-size: 150px;
+  color: #4a5a70;
+  align-text: center;
+  padding: 0px 0px 0px 0px;
+  line-height: 1;
+}
+.splash-page-caption {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-size: 27px;
+  color: #4a5a70;
+  line-height: 1.2;
+}
+.splash-page-login-or-signup {
+  color: #dce8f8;
+}
+
+.splash-page-user-buttons {
+  color: #dce8f8;
+}
+
+.splash-page-sign-in {
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  font-size: 18px;
+  color: #4a5a70;
+  padding: 0px 0px 0px 10px;
+}
+
+.splash-page-sign-up {
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ff5757;
+  padding: 0px 10px 0px 0px;
 }
