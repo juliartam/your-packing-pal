@@ -1,9 +1,9 @@
 import express from "express"
 import passport from "passport"
-
 import {User} from "../../../models/index.js"
 import cleanUserInput from "../../../services/cleanUserInput.js"
 import {ValidationError} from "objection"
+
 
 const usersRouter = new express.Router()
 

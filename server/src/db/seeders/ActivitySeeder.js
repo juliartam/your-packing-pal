@@ -1,19 +1,24 @@
-import {Activity} from "../../models/index.js"
+import {Activity, Trip} from "../../models/index.js"
 
 class ActivitySeeder {
   static async seed() {
+
+    const activityOneGreece = await Trip.query().findOne({name: "Greece"})
+    const activityTwoGreece = await Trip.query().findOne({name: "Greece"})
+    const activityOneCape = await Trip.query().findOne({name: "Cape"})
+
     const activitySeederData = [
       {
         name: "Workout",
-        date: "September 14, 2023",
-        notes: "At home workout",
-        tripId: 1
+        tripId: activityOneGreece.id
       },
       {
-        name: "Workout",
-        date: "September 15, 2023",
-        notes: "Spinning class @  SpinCity",
-        tripId: 1
+        name: "Brunch",
+        tripId: activityTwoGreece.id
+      },
+      {
+        name: "Beach",
+        tripId: activityOneCape.id
       }
     ]
     for (const activity of activitySeederData) {

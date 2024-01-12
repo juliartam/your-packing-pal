@@ -10,7 +10,7 @@ const TripDetail = (props) => {
     activities: [],
   })
 
-  const {id, name, location, startDate, endDate, notes, status} = trip
+  const {id, name, location, startDate, endDate} = trip
   const {id: tripId} = useParams()
 
   const getTrip = async () => {

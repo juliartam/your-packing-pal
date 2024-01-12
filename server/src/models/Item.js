@@ -19,13 +19,12 @@ class Item extends Model {
 
   static get relationMappings() {
     const {Activity} = require("./index.js")
-
     return {
-      trip: {
+      activity: {
         relation: Model.BelongsToOneRelation,
         modelClass: Activity,
         join: {
-          from: "items.activitiesId",
+          from: "items.activityId",
           to: "activities.id"
         }
       }

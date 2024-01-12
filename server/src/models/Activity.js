@@ -4,7 +4,6 @@ class Activity extends Model {
   static get tableName() {
     return "activities"
   }
-
   static get jsonSchema() {
     return {
       type: "object",
@@ -12,8 +11,6 @@ class Activity extends Model {
       properties: {
         tripId: {type: ["integer", "string"]},
         name: {type: "string"},
-        date: {type: "string"},
-        notes: {type: "string"}
       },
     }
   }
@@ -30,16 +27,23 @@ class Activity extends Model {
           to: "trips.id"
         }
       },
+      //jt: ommented out manytomanyrelation, replacing with hasMany
+      // items: {
+      //   relation: Model.ManyToManyRelation,
+      //   modelClass: Item,
+      //   join: {
+      //     from: "activities.id",
+      //     through: {
+      //       from: "items.activityId",
+      //       to: "items.itemId"
+      //     },
+      //     to: "items.id"
       items: {
-        relation: Model.ManyToManyRelation,
+        relation: Model.HasManyRelation,
         modelClass: Item,
         join: {
           from: "activities.id",
-          through: {
-            from: "selections.activityId",
-            to: "selections.itemId"
-          },
-          to: "items.id"
+          to: "items.activityId"
         }
       }
     }

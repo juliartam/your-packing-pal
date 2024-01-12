@@ -51,7 +51,6 @@ class User extends uniqueFunc(Model) {
 
   $formatJson(json) {
     const serializedJson = super.$formatJson(json)
-
     if (serializedJson.cryptedPassword) {
       delete serializedJson.cryptedPassword
     }
