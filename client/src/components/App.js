@@ -14,7 +14,7 @@ import ActivityTile from './layout/ActivityTile'
 import NewActivityForm from './layout/NewActivityForm'
 import NewItemForm from './layout/NewItemForm'
 import AuthenticatedRoute from "./authentication/AuthenticatedRoute"
-
+import UserProfile from './layout/UserProfile'
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined)
@@ -38,7 +38,31 @@ const App = (props) => {
         <Route exact path="/" component={SplashPage} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <Route exact path="/trips" component={TripList} />
+        {/* <Route exact path="/trips" component={TripList} /> */}
+        <AuthenticatedRoute
+          exact
+          path="/profile"
+          component={UserProfile}
+          user={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
+
+        <Route
+          exact
+          path="/trips"
+          render={(props) => {
+            if (currentUser) {
+              return <TripList user={currentUser} setCurrentUser={setCurrentUser} {...props} />
+            }
+          }}
+        />
+        <AuthenticatedRoute
+          exact={true}
+          path="/trips"
+          component={TripList}
+          user={currentUser}
+          setCurrentUser={setCurrentUser}
+        />
         <Route exact path="/trips/new" component={NewTripForm} />
         <Route exact path="/trips/:id" component={TripDetail} />
         <Route exact path="/trips/new" component={NewTripForm} />
