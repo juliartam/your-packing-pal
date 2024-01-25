@@ -8,15 +8,42 @@ import cleanUserInput from "../../../services/cleanUserInput.js"
 // /ap/v1/trips//jt: all endpoints related to the trips page go here 
 const tripsRouter = new express.Router()
 
+
+//{#000} semi-working, revert back to this if testing doesnt work
+// tripsRouter.get("/", async (req, res) => {
+//   try {
+//     const allTrips = await Trip.query()
+//     return res.status(200).json({trips: allTrips})
+//   } catch (err) {
+//     return res.status(500).json({error: err})
+//   }
+// })
+
+
+
 tripsRouter.get("/", async (req, res) => {
+  const currentUserId = req.user.id
+  console.log(currentUserId)
   try {
-    const allTrips = await Trip.query()
-    return res.status(200).json({trips: allTrips})
+    const currentUserTrips = await Trip.query().where('userId', currentUserId)
+    console.log(currentUserTrips)
+    return res.status(200).json({trips: currentUserTrips})
   } catch (err) {
     return res.status(500).json({error: err})
   }
 })
 
+
+//{#100} in progress, testing
+// tripsRouter.get("/", async (req, res) => {
+//   try {
+//     const allTrips = await Trip.query().findById(userId)
+//     await allTrips.$relatedQuery("users").findById({user: "id"})
+//     return res.status(200).json({trips: allTrips})
+//   } catch (err) {
+//     return res.status(500).json({error: err})
+//   }
+// })
 
 // tripsRouter.post("/", async (req, res) => {
 //   const currentUserId = req.user.id
@@ -53,8 +80,6 @@ tripsRouter.post("/", async (req, res) => {
     }
   }
 })
-
-
 
 tripsRouter.get("/:id", async (req, res) => {
   console.log("Hello")

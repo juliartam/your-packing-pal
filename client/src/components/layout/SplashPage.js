@@ -33,8 +33,8 @@ const SplashPage = (props) => {
   return (
 
     <div className="align-center splash-page-background">
-      <div className="splash-page-title grid-x align-center">Packt</div>
-      <h4 className="splash-page-caption grid-x align-center">the faster and smarter way to get packed.</h4>
+      <div className="splash-page-title grid-x align-center">PACKT</div>
+      <h4 className="splash-page-caption grid-x margin-x align-center">the faster and smarter way to get packed.</h4>
       <div className="grid-x align-center">{signUpItem} {signInItem}
       </div>
     </div>

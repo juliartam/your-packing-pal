@@ -38,7 +38,7 @@ const NewActivityForm = (props) => {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    // event.preventDefault()
     addNewActivity()
   }
 
@@ -57,7 +57,7 @@ const NewActivityForm = (props) => {
   return (
     <div className="grid-x grid-padding-x align-center">
       <div className="cell medium-4">
-        <h1 className="form-title">Activity</h1>
+        {/* <h1 className="form-title"></h1> */}
         <ErrorList errors={errors} />
         <form onSubmit={handleSubmit} className="grid-x grid-padding-x align-center">
           <input
@@ -66,9 +66,10 @@ const NewActivityForm = (props) => {
             value={newActivity.name}
             type="text"
             onChange={handleInputChange}
-            placeholder="What is the activity you want to pack for?"
+            placeholder="Add Item"
           />
           <input className="form-submit-button" type="Submit" />
+
         </form>
       </div>
     </div>

@@ -39,15 +39,15 @@ const App = (props) => {
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
         {/* <Route exact path="/trips" component={TripList} /> */}
-        <AuthenticatedRoute
+        {/* <AuthenticatedRoute
           exact
           path="/profile"
           component={UserProfile}
           user={currentUser}
           setCurrentUser={setCurrentUser}
-        />
+        /> */}
 
-        <Route
+        {/* <Route
           exact
           path="/trips"
           render={(props) => {
@@ -55,7 +55,7 @@ const App = (props) => {
               return <TripList user={currentUser} setCurrentUser={setCurrentUser} {...props} />
             }
           }}
-        />
+        /> */}
         <AuthenticatedRoute
           exact={true}
           path="/trips"

@@ -1,26 +1,26 @@
 import express from "express"
 import passport from "passport"
+import objection from "objection"
+const {ValidationError} = objection
 import {User} from "../../../models/index.js"
 import cleanUserInput from "../../../services/cleanUserInput.js"
-import {ValidationError} from "objection"
-
 
 const usersRouter = new express.Router()
 
 usersRouter.post("/", async (req, res) => {
-  const {email, password, passwordConfirmation} = req.body
+  const formInput = cleanUserInput(req.body)
+  const {email, password, passwordConfirmation} = formInput
 
-  const cleanedInput = cleanUserInput({email, password})
   try {
-    const persistedUser = await User.query().insertAndFetch({cleanedInput})
+    const persistedUser = await User.query().insertAndFetch({email, password})
     return req.login(persistedUser, () => {
       return res.status(201).json({user: persistedUser})
     })
   } catch (error) {
+    console.log(error)
     if (error instanceof ValidationError) {
       return res.status(422).json({errors: error.data})
     }
-    console.log(error)
     return res.status(500).json({errors: error})
   }
 })

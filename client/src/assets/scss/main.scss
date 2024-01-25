@@ -1,8 +1,8 @@
-@import "./foundation/settings";
-@import "~foundation-sites/scss/foundation";
+@import './foundation/settings';
+@import '~foundation-sites/scss/foundation';
 @include foundation-everything;
-// @import "https://fonts.googleapis.com/css?family=Font+Name";
-@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200";
+@import 'https://fonts.googleapis.com/css2?family=Lexend:wght@100;200&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200';
 
 // place global css here
 *,
@@ -53,7 +53,7 @@ body {
 }
 
 .page-header-title {
-  font-family: "PP Editorial New";
+  font-family: 'PP Editorial New';
   font-weight: bolder;
   font-size: 30px;
   text-align: center;
@@ -63,7 +63,7 @@ body {
 }
 
 .page-header-subtitle {
-  font-family: "PP Editorial New";
+  font-family: 'PP Editorial New';
   font-size: 20px;
   text-align: center;
   color: #222b3b;
@@ -71,7 +71,7 @@ body {
   margin: 0.1em 0.1em 0.5em 0.1em;
 }
 .page-header-caption {
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-size: 20px;
   text-align: center;
   color: #222b3b;
@@ -80,7 +80,7 @@ body {
 }
 
 .material-icons {
-  font-family: "Material Symbols Outlined";
+  font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
   font-size: 30px; /* Preferred icon size */
@@ -100,7 +100,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 
     font-size: 50px;
     // text-align: center;
@@ -111,31 +111,40 @@ body {
 
 //{#100} TILES
 .tile-style {
-  padding: 0.6em;
-  margin: 0.7em;
+  padding: 0.4em;
+  margin: 0.2em;
   background-color: white;
   border: 1px solid #006d7763;
   border-radius: 0.5em;
-  box-shadow: 1px 1px 1px 1px #77969b58;
+  // box-shadow: 1px 1px 1px 1px #77969b58;
 }
 .tile-title {
-  font-family: "PP Editorial New";
+  font-family: 'PP Editorial New';
   font-size: 20px;
   font-weight: 900;
   color: #2b2d42;
   display: inline;
 }
 .tile-subtitle {
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-size: medium;
   color: #2b2d42;
   display: table-row;
 }
 .tile-body {
-  font-family: "Playfair Display";
+  font-family: 'Lexend';
   font-size: medium;
   color: #2b2d42;
   display: table-row;
+}
+
+.items-list {
+  padding: 0.1em;
+  margin: 0.1em;
+  font-family: 'Lexend';
+  font-size: medium;
+  color: #2b2d42;
+  // display: table-row;
 }
 
 .custom-button {
@@ -151,7 +160,7 @@ body {
   margin: auto 1px;
   padding: 7px 0;
   font-weight: bold;
-  font-family: "Avenir";
+  font-family: 'Avenir';
 }
 .custom-button:hover,
 .nav-option:hover {
@@ -189,7 +198,7 @@ body {
 
 .sign-in {
   color: #dce8f8;
-  font-family: "Avenir";
+  font-family: 'Avenir';
 }
 .sign-in:hover {
   color: #dce8f8;
@@ -198,10 +207,10 @@ body {
   color: #dce8f8;
 }
 
-//{#100} FORMS
+//{#123} FORMS
 .form-title {
   color: #2b2d42;
-  font-family: "PP Editorial New";
+  font-family: 'PP Editorial New';
   font-weight: bolder;
   font-size: 30pt;
   text-align: center;
@@ -211,7 +220,7 @@ body {
 }
 .form-label {
   color: #2b2d42;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 18px;
   // text-align: left;
   padding: 0px 0px 0px 0px;
@@ -220,7 +229,7 @@ body {
   // justify-content: center;
 }
 .form-input-single {
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-size: 14px;
   color: #2b2d42;
   border-color: #2b2d4233;
@@ -229,7 +238,7 @@ body {
   border-radius: 0.9em;
 }
 .form-input-multi {
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-size: 14px;
   color: #2b2d42;
   border-color: #2b2d4233;
@@ -245,30 +254,32 @@ body {
   border-radius: 1em;
   border-color: #2b2d4233;
   border-style: none;
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-weight: 500;
   font-size: 14px;
 }
 
-//{#100} SPLASH PAGE
+//{#000} SPLASH PAGE
 .splash-page-background {
-  background: #EFE6DD;
+  background: #dce8f8;
 }
 .splash-page-title {
-  font-family: "PP Editorial New";
+  font-family: 'PP Editorial New';
   font-weight: bolder;
   font-size: 150px;
   color: #4a5a70;
   align-text: center;
-  padding: 0px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
   line-height: 1;
+  letter-spacing: 0.5cm;
 }
 .splash-page-caption {
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-style: italic;
   font-size: 27px;
   color: #4a5a70;
   line-height: 1.2;
+  padding: 10px 0px 0px 10px;
 }
 .splash-page-login-or-signup {
   color: #dce8f8;
@@ -279,17 +290,17 @@ body {
 }
 
 .splash-page-sign-in {
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-weight: 500;
   font-size: 18px;
   color: #4a5a70;
-  padding: 0px 0px 0px 10px;
+  padding: 60px 0px 0px 10px;
 }
 
 .splash-page-sign-up {
-  font-family: "Red Hat Text";
+  font-family: 'Red Hat Text';
   font-weight: 500;
   font-size: 18px;
   color: #ff5757;
-  padding: 0px 10px 0px 0px;
+  padding: 60px 10px 0px 0px;
 }

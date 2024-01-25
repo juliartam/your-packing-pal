@@ -6,13 +6,16 @@ const router = new express.Router()
 //jt: add it here
 const clientRoutes = [
   "/",
+
+  "/user-sessions/new",
+  "/users/new",
+
+  // "/users",
   "/trips",
   "/trips/new",
   "/trips/:id",
   "/trips/:id/activities-new",
   "trips/:id/activities/:id/items-new",
-  "/user-sessions/new",
-  "/users/new",
 ]
 const authedClientRoutes = ["/profile"]
 
