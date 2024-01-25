@@ -71,43 +71,44 @@ const SignInForm = () => {
   }
 
   return (
-    <div className="form-container">
-      <div className="form-item-container">
-        <div className="form-card">
-          <h1 className="form-title">Sign In</h1>
-          <form>
-            <input
-              type="text"
-              className="input-field"
-              name="email"
-              value={userPayload.email}
-              onChange={onInputChange}
-              placeholder="Email"
-            />
-            <FormError error={errors.email} />
+    <div className="grid-container">
+      <div className="form-card">
+        <h1 className="form-title">Sign In</h1>
+        <form className="form-label form-input-single">
+          <input
+            className='form-input-single grid-container'
+            type="text"
+            // className="input-field"
+            name="email"
+            value={userPayload.email}
+            onChange={onInputChange}
+            placeholder="Email"
+          />
+          <FormError error={errors.email} />
 
-            <input
-              type="password"
-              className="input-field"
-              name="password"
-              value={userPayload.password}
-              onChange={onInputChange}
-              placeholder="Password"
-            />
-            <FormError error={errors.password} />
+          <input
+            className='form-input-single'
+            type="password"
+            // className="input-field"
+            name="password"
+            value={userPayload.password}
+            onChange={onInputChange}
+            placeholder="Password"
+          />
+          <FormError error={errors.password} />
 
-            <button onClick={onSubmit} type="submit" className="form-submit-button">
-              Submit
-            </button>
-          </form>
-        </div>
-        <div className="under-form-text">
-          Don't have an account?{" "}
-          <a className="under-form-link" href="../users/new">
-            Sign up
-          </a>
-        </div>
+          <button onClick={onSubmit} type="submit" className="form-submit-button">
+            Submit
+          </button>
+        </form>
+
       </div>
+      {/* <div className="under-form-text">
+        Don't have an account?{" "}
+        <a className="under-form-link" href="../users/new">
+          Sign up
+        </a>
+      </div> */}
     </div>
   )
 }

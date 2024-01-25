@@ -224,7 +224,7 @@ body {
   font-size: 18px;
   // text-align: left;
   padding: 0px 0px 0px 0px;
-  display: flexbox;
+  // display: flexbox;
   // align-items: center;
   // justify-content: center;
 }
@@ -234,8 +234,9 @@ body {
   color: #2b2d42;
   border-color: #2b2d4233;
   height: 40px;
-  padding: 5px 10px 5px 10px;
+  // padding: 5px 10px 5px 10px;
   border-radius: 0.9em;
+  width: 500px;
 }
 .form-input-multi {
   font-family: 'Red Hat Text';
@@ -245,6 +246,7 @@ body {
   height: 80px;
   padding: 5px 10px 5px 10px;
   border-radius: 0.9em;
+  width: 500px;
 }
 .form-submit-button {
   background-color: #2b2d4233;
@@ -294,7 +296,7 @@ body {
   font-weight: 500;
   font-size: 18px;
   color: #4a5a70;
-  padding: 60px 0px 0px 10px;
+  padding: 0px 0px 0px 10px;
 }
 
 .splash-page-sign-up {
@@ -302,5 +304,5 @@ body {
   font-weight: 500;
   font-size: 18px;
   color: #ff5757;
-  padding: 60px 10px 0px 0px;
+  padding: 0px 10px 0px 0px;
 }
